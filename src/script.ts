@@ -1,10 +1,13 @@
 // import * as YAML from 'yaml';
 import * as YAML from 'js-yaml';
 import * as fs from 'fs';
+import * as path from 'path';
 
 import { Scenario } from './types';
 
-export const StarWars: Scenario = {
+const outPath = path.join(__dirname, '../dist/StarWars.yaml');
+
+const StarWars: Scenario = {
   Name: 'Star Wars Query Tests',
   Tests: [
     {
@@ -32,4 +35,4 @@ export const StarWars: Scenario = {
   ]
 };
 
-fs.writeFileSync('./StarWars.yaml', YAML.safeDump(StarWars));
+fs.writeFileSync(outPath, YAML.safeDump(StarWars));
