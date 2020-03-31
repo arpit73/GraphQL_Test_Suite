@@ -32,18 +32,4 @@ export const StarWars: Scenario = {
   ]
 };
 
-const obj = {
-  Description: 'Correctly identifies R2-D2 as the hero of the Star Wars Saga',
-  Mock: {
-    Query: `
-    query HeroNameQuery {
-          hero {
-            name
-      }
-  }
-`
-  }
-};
-
-
 fs.writeFileSync('./StarWars.yaml', YAML.safeDump(StarWars));
