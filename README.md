@@ -2,7 +2,7 @@
 
 A proof of concept to demonstrate how Typescript can be used for writing the tests suit.
 
-Check `dist/StarWars/StarWars_Query.yaml` for an example of a generated file.
+Check [dist/StarWars/StarWars_Query.yaml](/dist/StarWars/StarWars_Query.yaml) for an example of a generated file.
 Typescript provides type hints and autocompletion and it will make it easier to maintain when file sizes increase significantly. It also provides an environment with possibility of automating tasks later.
 
 ## Test Schema
