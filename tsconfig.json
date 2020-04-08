@@ -11,5 +11,5 @@
         "baseUrl": ".",
     },
     "exclude": ["node_modules"],
-    "include": ["src/global.d.ts", "**/*.ts"]
+    "include": ["**/*.ts"]
 }
