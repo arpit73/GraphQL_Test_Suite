@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>graphql</title>
+	<meta name="description" content="Documentation for graphql">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">graphql</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>graphql</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#graphql-test-suite" id="graphql-test-suite" style="color: inherit; text-decoration: none;">
+					<h1>GraphQL Test Suite</h1>
+				</a>
+				<p>A proof of concept to demonstrate how Typescript can be used for writing the tests suit.</p>
+				<p>Check <code>dist/StarWars/StarWars_Query.yaml</code> for an example of a generated file.
+				Typescript provides type hints and autocompletion and it will make it easier to maintain when file sizes increase significantly. It also provides an environment with possibility of automating tasks later.</p>
+				<a href="#test-schema" id="test-schema" style="color: inherit; text-decoration: none;">
+					<h2>Test Schema</h2>
+				</a>
+				<pre><code class="language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">Scenario:</span> <span class="hljs-string">A</span> <span class="hljs-string">scenario</span> <span class="hljs-string">is</span> <span class="hljs-string">generic</span> <span class="hljs-string">condition</span> <span class="hljs-string">or</span> <span class="hljs-string">case</span> <span class="hljs-string">for</span> <span class="hljs-string">which</span> <span class="hljs-string">we</span> <span class="hljs-string">are</span> <span class="hljs-string">testing.</span>
+
+  <span class="hljs-attr">CommonData:</span> <span class="hljs-string">Common</span> <span class="hljs-string">data</span> <span class="hljs-string">available</span> <span class="hljs-string">to</span> <span class="hljs-string">all</span> <span class="hljs-string">the</span> <span class="hljs-string">tests.</span> <span class="hljs-string">All</span> <span class="hljs-string">properties</span> <span class="hljs-string">are</span> <span class="hljs-string">@Optional</span>
+    <span class="hljs-attr">Schema:</span> <span class="hljs-string">The</span> <span class="hljs-string">GraphQL</span> <span class="hljs-string">schema</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">test.</span>
+    <span class="hljs-attr">SchemaFile:</span> <span class="hljs-string">The</span> <span class="hljs-string">location</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">.graphql</span> <span class="hljs-string">schema</span> <span class="hljs-string">file</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">test.</span>
+    <span class="hljs-attr">TestData:</span> <span class="hljs-string">Data</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">test.</span>
+    <span class="hljs-attr">TestDataFile:</span> <span class="hljs-string">the</span> <span class="hljs-string">location</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">YAML</span> <span class="hljs-string">or</span> <span class="hljs-string">JSON</span> <span class="hljs-string">file</span> <span class="hljs-string">containing</span> <span class="hljs-string">data</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">test.</span>
+
+  <span class="hljs-attr">Tests:</span> <span class="hljs-string">Array</span> <span class="hljs-string">of</span> <span class="hljs-string">tests.</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">Name:</span> <span class="hljs-string">Name</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">test.</span>
+      <span class="hljs-attr">Mock:</span> <span class="hljs-string">Mock</span> <span class="hljs-string">data</span> <span class="hljs-string">and</span> <span class="hljs-string">schema</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">test.</span> <span class="hljs-string">Extends</span> <span class="hljs-string">{</span> <span class="hljs-string">CommonData</span> <span class="hljs-string">}.</span>
+        <span class="hljs-attr">Query:</span> <span class="hljs-string">The</span> <span class="hljs-string">GraphQL</span> <span class="hljs-string">query</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">test.</span>
+
+      <span class="hljs-attr">Action:</span> <span class="hljs-string">The</span> <span class="hljs-string">kind</span> <span class="hljs-string">of</span> <span class="hljs-string">operation</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">done</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">query.</span>
+        <span class="hljs-attr">Type:</span> <span class="hljs-string">Type</span> <span class="hljs-string">of</span> <span class="hljs-string">action</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">taken,</span> <span class="hljs-string">can</span> <span class="hljs-string">be</span> <span class="hljs-string">one</span> <span class="hljs-string">of</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Parsing :</span> <span class="hljs-string">Parse</span> <span class="hljs-string">the</span> <span class="hljs-string">the</span> <span class="hljs-string">given</span> <span class="hljs-string">query.</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Validation :</span> <span class="hljs-string">Validate</span> <span class="hljs-string">the</span> <span class="hljs-string">given</span> <span class="hljs-string">query.</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Execution :</span> <span class="hljs-string">Execute</span> <span class="hljs-string">the</span> <span class="hljs-string">given</span> <span class="hljs-string">query.</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">Execute:</span> <span class="hljs-string">Extra</span> <span class="hljs-string">properties</span> <span class="hljs-string">for</span> <span class="hljs-string">Execution</span> <span class="hljs-string">case</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-attr">Execution_Target:</span>
+                  <span class="hljs-string">The</span> <span class="hljs-string">name</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">operation</span> <span class="hljs-string">to</span> <span class="hljs-string">execute,</span> <span class="hljs-string">in</span> <span class="hljs-string">case</span> <span class="hljs-string">query</span>  <span class="hljs-string">contains</span> <span class="hljs-string">multiple.</span> <span class="hljs-string">@Optional</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-attr">Validated:</span>
+               <span class="hljs-string">`true`</span> <span class="hljs-string">if</span> <span class="hljs-string">query</span> <span class="hljs-string">should</span> <span class="hljs-string">be</span> <span class="hljs-string">validated</span> <span class="hljs-string">during</span> <span class="hljs-string">execution.</span> <span class="hljs-string">otherwise</span> <span class="hljs-string">`false`.</span> <span class="hljs-string">@Optional</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-attr">Data_Target:</span>
+                 <span class="hljs-string">The</span> <span class="hljs-string">name</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">data</span> <span class="hljs-string">object</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">test,</span> <span class="hljs-string">picked</span> <span class="hljs-string">from</span> <span class="hljs-string">`TestData`</span> <span class="hljs-string">in</span> <span class="hljs-string">Mock</span> <span class="hljs-string">field.</span> <span class="hljs-string">@Optional</span>
+
+      <span class="hljs-attr">Assertion:</span> <span class="hljs-string">The</span> <span class="hljs-string">expected</span> <span class="hljs-string">result</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">action,</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">used</span> <span class="hljs-string">for</span> <span class="hljs-string">direct</span> <span class="hljs-string">comparisons</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">test.</span>
+
+        <span class="hljs-attr">Expectation:</span> <span class="hljs-string">The</span> <span class="hljs-string">case</span> <span class="hljs-string">for</span> <span class="hljs-string">which</span> <span class="hljs-string">we</span> <span class="hljs-string">will</span> <span class="hljs-string">assert.</span> <span class="hljs-string">It</span> <span class="hljs-string">can</span> <span class="hljs-string">be</span> <span class="hljs-string">one</span> <span class="hljs-string">of...</span>
+         <span class="hljs-bullet">-</span> <span class="hljs-attr">Success:</span> <span class="hljs-string">The</span> <span class="hljs-string">Parsing</span> <span class="hljs-string">or</span> <span class="hljs-string">Validation</span> <span class="hljs-string">was</span> <span class="hljs-string">successful</span> <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Parsing</span> <span class="hljs-string">|</span> <span class="hljs-string">Validation.</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Syntax Error:</span> <span class="hljs-string">A</span> <span class="hljs-string">syntax</span> <span class="hljs-string">error</span> <span class="hljs-string">occurred</span> <span class="hljs-string">while</span> <span class="hljs-string">parsing.</span> <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Parsing</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Execution Result:</span> <span class="hljs-string">Expect</span> <span class="hljs-string">a</span> <span class="hljs-string">result</span> <span class="hljs-string">a</span> <span class="hljs-string">after</span> <span class="hljs-string">execution.</span> <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Execution</span>
+               <span class="hljs-bullet">-</span> <span class="hljs-attr">Result:</span> <span class="hljs-string">The</span> <span class="hljs-string">result</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">execution.</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Error Count:</span> <span class="hljs-string">Expect</span> <span class="hljs-string">an</span> <span class="hljs-string">error</span> <span class="hljs-string">count</span> <span class="hljs-string">when</span> <span class="hljs-string">error</span> <span class="hljs-string">has</span> <span class="hljs-string">occurred.</span> <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Validation</span> <span class="hljs-string">|</span> <span class="hljs-string">Execution</span>
+               <span class="hljs-bullet">-</span> <span class="hljs-attr">ErrorCount:</span> <span class="hljs-string">The</span> <span class="hljs-string">number</span> <span class="hljs-string">of</span> <span class="hljs-string">errors</span> <span class="hljs-string">encountered.</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Error Message:</span> <span class="hljs-string">Expect</span> <span class="hljs-string">an</span> <span class="hljs-string">error</span> <span class="hljs-string">message</span> <span class="hljs-string">while</span> <span class="hljs-string">Validation</span> <span class="hljs-string">or</span> <span class="hljs-string">execution.</span>
+               <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Validation</span> <span class="hljs-string">|</span> <span class="hljs-string">Execution</span>
+               <span class="hljs-bullet">-</span> <span class="hljs-attr">ErrorMessage:</span> <span class="hljs-string">The</span> <span class="hljs-string">error</span> <span class="hljs-string">message</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">matched.</span>
+               <span class="hljs-bullet">-</span> <span class="hljs-attr">Locations:</span> <span class="hljs-string">Location</span> <span class="hljs-string">or</span> <span class="hljs-string">Array</span> <span class="hljs-string">of</span> <span class="hljs-string">Location</span> <span class="hljs-string">@Optional</span>
+                  <span class="hljs-bullet">-</span> <span class="hljs-attr">Location:</span> <span class="hljs-string">{</span> <span class="hljs-string">Line</span> <span class="hljs-string">,</span> <span class="hljs-string">Column</span> <span class="hljs-string">}</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">Execution Exception:</span> <span class="hljs-string">Expect</span> <span class="hljs-string">an</span> <span class="hljs-string">an</span> <span class="hljs-string">exception</span> <span class="hljs-string">to</span> <span class="hljs-string">occur</span> <span class="hljs-string">during</span> <span class="hljs-string">execution.</span> <span class="hljs-string">@Action_Type</span> <span class="hljs-string">Execution</span>
+               <span class="hljs-bullet">-</span> <span class="hljs-attr">Exception:</span> <span class="hljs-string">The</span> <span class="hljs-string">exception</span> <span class="hljs-string">string</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">matched.</span></code></pre>
+				<a href="#running-the-project" id="running-the-project" style="color: inherit; text-decoration: none;">
+					<h2>Running the project</h2>
+				</a>
+				<p>Clone this repository.
+				Then run.</p>
+				<pre><code class="language-sh"><span class="hljs-built_in">cd</span> GraphQL_Test_Suite
+npm install</code></pre>
+				<a href="#generate-distribution-files" id="generate-distribution-files" style="color: inherit; text-decoration: none;">
+					<h3>Generate Distribution Files</h3>
+				</a>
+				<pre><code class="language-sh">npm run start</code></pre>
+				<a href="#generate-documentation" id="generate-documentation" style="color: inherit; text-decoration: none;">
+					<h3>Generate Documentation</h3>
+				</a>
+				<pre><code class="language-sh">npm run docs</code></pre>
+				<a href="#folder-structure" id="folder-structure" style="color: inherit; text-decoration: none;">
+					<h2>Folder Structure</h2>
+				</a>
+				<pre><code class="language-sh">.
+├── dist       // The files to distributed live here.
+│ └── StarWars // The distribution folder <span class="hljs-keyword">for</span> the starwars example tests.
+│
+├── docs       // The autogenerated documentation from using `typedoc`
+│
+├── src        // The automation script and all tests live here.
+│ ├── Execution // Tests related to execution of queries.
+│ ├── Parsing   // Tests related to parsing of queries.
+│ ├── StarWars  // The StarWars example that tests all types of uses cases.
+│ ├── types    // Typescript <span class="hljs-built_in">type</span> definitions
+│ ├── Validation // Tests related to Validation of queries.
+│ └── CreateDistFiles.ts   // The script responsible <span class="hljs-keyword">for</span> generation of all distributions files.</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_createdistfiles_.html">&quot;<wbr>Create<wbr>Dist<wbr>Files&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_starwars_starwarsquery_.html">&quot;<wbr>Star<wbr>Wars/<wbr>Star<wbr>Wars<wbr>Query&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_actions_.html">&quot;types/<wbr>Actions&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_assertions_.html">&quot;types/<wbr>Assertions&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_index_.html">&quot;types/index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

@@ -1,24 +1,51 @@
 export type QueryType = 'Parsing' | 'Validation' | 'Execution';
 
 interface QueryParsing<T> {
+  /**
+   * Parse the the given query.
+   * @Type `"Parsing"`
+   */
   Type: T;
 }
 
 interface QueryValidation<T> {
+  /**
+   * Validate the given query.
+   * @Type `"Validation"`
+   */
   Type: T;
-  Validate: string;
 }
 
 interface Operation {
+  /**
+   * The name of the operation to execute, in case query contains multiple.
+   * @Optional
+   */
   Execution_Target: string;
-  Variables: object;
-  Validation: boolean;
+  /**
+   * `true` if query should be validated during execution. otherwise `false`.
+   * @Optional
+   */
+  Validated: boolean;
+  /**
+   * The name of the data object to be used in the test, picked from `TestData` in Mock field.
+   * @Optional
+   */
   Data_Target: string;
 }
 
 interface QueryExecution<T> {
+  /**
+   * Execute the given query.
+   *  @Type `"Validation"`
+   */
   Type: T;
-  Execute: boolean | Partial<Operation>;
+  /**
+   * Contains extra details about execution.
+   * @Type `"Execution"`
+   * @Optional
+   */
+  Execute?: Partial<Operation>;
 }
 
 type Action<T extends QueryType> = T extends 'Parsing'
@@ -30,4 +57,3 @@ type Action<T extends QueryType> = T extends 'Parsing'
   : never;
 
 export default Action;
-

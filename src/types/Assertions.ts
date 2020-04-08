@@ -3,26 +3,50 @@ export type Expectations =
   | 'Syntax Error'
   | 'Execution Result'
   | 'Error Count'
-  | 'Error Code'
+  | 'Error Message'
   | 'Execution Exception';
 
 interface Successful<T> {
+  /**
+   * The Parsing or Validation was successful.
+   * @Action_Type `"Parsing"` | `"Validation"`
+   * @Type `"Success"`
+   */
   Expectation: T;
-  Successful: boolean;
 }
 
 interface SyntaxError<T> {
+  /**
+   * A syntax error occurred while parsing.
+   * @Action_Type `"Parsing"`
+   * @Type `"Syntax Error"`
+   */
   Expectation: T;
-  SyntaxError: boolean;
 }
 
 interface ExecutionResult<T> {
+  /**
+   * Expect a result a after execution.
+   * @Action_Type `"Execution"`
+   * @Type `"Execution Result"`
+   */
   Expectation: T;
+  /**
+   * The result of the execution.
+   */
   Result: object;
 }
 
 interface ErrorCount<T> {
+  /**
+   * Expect an error count when error has occurred.
+   * @Action_Type `"validation"` | `"Execution"`
+   * @Type `"Error Count"`
+   */
   Expectation: T;
+  /**
+   * The number of errors encountered.
+   */
   ErrorCount: number;
 }
 
@@ -31,14 +55,33 @@ interface Location {
   Column: number;
 }
 
-interface ErrorCode<T> {
+interface ErrorMessage<T> {
+  /**
+   * Expect an error message while validation or execution.
+   * @Action_Type `"validation"` | `"Execution"`
+   * @Type `"Error Message"`
+   */
   Expectation: T;
-  Error: string;
+  /**
+   * The error message to be matched.
+   */
+  ErrorMessage: string;
+  /**
+   * The location of where a error occurred | and a of locations where error occurred.
+   */
   Locations?: Location | Location[];
 }
 
 interface ExecutionException<T> {
+  /**
+   * Expect an an exception to occur during execution.
+   * @Action_Type `"Execution"`
+   * @Type `"Execution Exception"`
+   */
   Expectation: T;
+  /**
+   * The exception string to be matched.
+   */
   Exception: string;
 }
 
@@ -50,8 +93,8 @@ type Assertion<T extends Expectations> = T extends 'Success'
   ? ExecutionResult<T>
   : T extends 'Error Count'
   ? ErrorCount<T>
-  : T extends 'Error Code'
-  ? ErrorCode<T>
+  : T extends 'Error Message'
+  ? ErrorMessage<T>
   : T extends 'Execution Exception'
   ? ExecutionException<T>
   : never;
